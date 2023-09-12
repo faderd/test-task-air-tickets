@@ -1,0 +1,49 @@
+.filter__title {
+  text-transform: uppercase;
+  margin-bottom: 9px;
+}
+
+.filter__radio {
+  display: flex;
+}
+
+.filter__radio-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+
+  &&:checked+.filter__radio-label {
+    background-color: #1192ee;
+    color: #fff;
+    border-color: #aedbf8;
+  }
+}
+
+.filter__radio-label {
+  text-transform: uppercase;
+  color: #1192ee;
+  padding: 12px 20px;
+  cursor: pointer;
+  border: 1px solid #e3e5e6;
+
+  &&:hover {
+    background-color: #f1fcff;
+    border-color: #aedbf8;
+  }
+
+  &&:active {
+    background-color: #d8f6ff;
+  }
+
+
+  &&:first-of-type {
+    border-radius: 4px 0 0 4px;
+  }
+
+  &&:last-of-type {
+    border-radius: 0 4px 4px 0;
+  }
+}

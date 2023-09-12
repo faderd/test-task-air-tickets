@@ -1,0 +1,110 @@
+.ticket-card {
+  display: flex;
+  background-color: #fff;
+  width: 600px;
+  box-sizing: border-box;
+  padding: 24px 22px;
+  box-shadow: 0 1px 5px rgba(51, 51, 51, 0.33);
+  margin-bottom: 20px;
+  border-radius: 5px;
+
+  &:hover {
+    box-shadow: 0 5px 8px rgba(51, 51, 51, 0.33);
+  }
+}
+
+.ticket-card__buy {
+  padding-right: 20px;
+  position: relative;
+  width: 120px;
+
+  && img {
+    width: 100%;
+  }
+
+  &&::before {
+    content: '';
+    width: 2px;
+    height: 149px;
+    position: absolute;
+    right: 0;
+    top: -24px;
+    background-color: #f7f7f7;
+  }
+}
+
+.ticket-card__logo {
+  height: 50px;
+  width: 83%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ticket-card__info {
+  width: 100%;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket-card__times {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.ticket-card__arrival-time {
+  font-size: 34px;
+  line-height: 0.9;
+  width: 100px;
+  text-align: left;
+  color: #454545;
+}
+
+.ticket-card__stops {
+  &&::before {
+    content: '';
+    position: absolute;
+    right: 110px;
+    top: 25px;
+    display: block;
+    width: 175px;
+    height: 1px;
+    background-color: #d3d3d3;
+  }
+
+  &&::after {
+    content: '';
+    position: absolute;
+    right: 90px;
+    top: 8px;
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-image: url('./img/airplane.svg');
+    background-size: 36px 36px;
+  }
+}
+
+.ticket-card__departure-time {
+  font-size: 34px;
+  line-height: 0.9;
+  width: 100px;
+  text-align: right;
+  color: #454545;
+}
+
+.ticket-card__locations {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ticket-card__dates {
+  margin-top: 2px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
