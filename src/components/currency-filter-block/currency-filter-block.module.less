@@ -15,14 +15,14 @@
   border: 0;
   clip: rect(0, 0, 0, 0);
 
-  &&:checked+.filter__radio-label {
+  &&:checked+.filter__radio-marking {
     background-color: #1192ee;
     color: #fff;
     border-color: #aedbf8;
   }
 }
 
-.filter__radio-label {
+.filter__radio-marking {
   text-transform: uppercase;
   color: #1192ee;
   padding: 12px 20px;
@@ -37,13 +37,14 @@
   &&:active {
     background-color: #d8f6ff;
   }
+}
 
-
-  &&:first-of-type {
+.filter__radio-label {
+  &&:first-child .filter__radio-marking {
     border-radius: 4px 0 0 4px;
   }
 
-  &&:last-of-type {
+  &&:last-child .filter__radio-marking {
     border-radius: 0 4px 4px 0;
   }
 }

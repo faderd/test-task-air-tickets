@@ -20,7 +20,7 @@ function CurrencyFilterBlock({ searchParams, setSearchParams }: CurrencyFilterBl
       <form className={styles['filter__radio']}>
 
         {Object.keys(Currency).map((currencyKey) => (
-          <label key={currencyKey}>
+          <label className={styles['filter__radio-label']} key={currencyKey}>
             <input
               className={styles['filter__radio-input']}
               type='radio'
@@ -28,7 +28,7 @@ function CurrencyFilterBlock({ searchParams, setSearchParams }: CurrencyFilterBl
               checked={searchParamCurrency === Currency[currencyKey as keyof typeof Currency]}
               onChange={() => handleChangeCurrency(Currency[currencyKey as keyof typeof Currency])}
             />
-            <div className={styles['filter__radio-label']}>{currencyKey}</div>
+            <div className={styles['filter__radio-marking']}>{currencyKey}</div>
           </label>
         ))}
 

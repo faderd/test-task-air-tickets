@@ -1,4 +1,10 @@
-# React + TypeScript + Vite
+# Демонстрационное приложение - авиабилеты
+
+Проект представляет собой страницу выдачи билетов с фильтрами.
+
+Реализован на React, TypeScript, Redux Toolkit, сборка на Vite.
+
+![Главный экран](public/main-screen.jpg)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
