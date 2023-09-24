@@ -15,16 +15,13 @@
 
 .ticket-card__buy {
   position: relative;
-  width: 120px;
+  padding-right: 10px;
 
-  && img {
-    width: 100%;
-  }
 
   &&::before {
     content: '';
     width: 2px;
-    height: 149px;
+    height: 144px;
     position: absolute;
     right: 0;
     top: -24px;
@@ -34,9 +31,22 @@
 
 .ticket-card__logo {
   height: 50px;
-  width: 83%;
+  width: 120px;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
+
+  && img {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.ticket-card__button {
+  max-width: 120px;
 }
 
 .ticket-card__info {
@@ -80,7 +90,7 @@
     display: block;
     width: 35px;
     height: 35px;
-    background-image: url('./img/airplane.svg');
+    background-image: url('../img/airplane.svg');
     background-size: 36px 36px;
   }
 }

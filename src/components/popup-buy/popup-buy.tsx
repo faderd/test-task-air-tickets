@@ -58,7 +58,7 @@ function PopupBuy({ ticketForPopup, setTicketForPopup }: PopupBuyProps): JSX.Ele
         <div className={styles['popup__total']}>
           <p className={styles['popup__total-text']}>Итого</p>
           <svg viewBox="0 0 310 2" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 1L310 1.00003" stroke="#CFCFCF" stroke-dasharray="4 4" />
+            <path d="M0 1L310 1.00003" stroke="#CFCFCF" strokeDasharray="4 4" />
           </svg>
           <p className={styles['popup__total-price']}>{ticketForPopup?.price.toLocaleString('ru-RU')}&nbsp;{currencySymbol}</p>
         </div>

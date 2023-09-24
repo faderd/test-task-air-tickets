@@ -21,7 +21,9 @@ function TicketCard({ ticket, currencySymbol, setTicketForPopup }: TicketCardPro
         <div className={styles['ticket-card__logo']}>
           <img src={`./img/${ticket?.carrier.toLowerCase()}.jpg`}></img>
         </div>
-        <Button title={`Купить\nза ${ticket?.price.toLocaleString('ru-RU')} ${currencySymbol}`} onClick={handleClickBuy} />
+        <div className={styles['ticket-card__button']}>
+          <Button title={`Купить\nза ${ticket?.price.toLocaleString('ru-RU')} ${currencySymbol}`} onClick={handleClickBuy} />
+        </div>
       </div>
       <div className={styles['ticket-card__info']}>
         <div className={styles['ticket-card__times']}>

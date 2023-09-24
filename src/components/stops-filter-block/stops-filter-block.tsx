@@ -66,6 +66,7 @@ function StopsFilterBlock({ searchParams, setSearchParams }: StopsFilterBlockPro
             <input
               type='checkbox'
               name={stop}
+              id={stop}
               checked={getIsChecked(stop)}
               onChange={() => handleChangeStops(stop)}
             />
