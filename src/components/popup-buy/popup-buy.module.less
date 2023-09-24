@@ -1,0 +1,69 @@
+.popup__product-info {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #b4b4b4;
+  border-radius: 8px;
+
+  padding: 3px;
+  background-color: #fafafa;
+
+  margin-bottom: 20px;
+}
+
+.popup__carrier-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 7px;
+
+  border: 1px solid #f1f1f1;
+  border-radius: 8px;
+}
+
+.popup__ticket-line {
+  &&:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.popup__ticket-line-top {
+  display: flex;
+  font-size: 18px;
+  font-weight: 600;
+  color: #454545;
+  margin-bottom: 3px;
+}
+
+.popup__ticket-line-bottom {
+  display: flex;
+  font-size: 12px;
+}
+
+.popup__ticket-cell {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.popup__total {
+  margin: 0 0 45px;
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  align-items: end;
+}
+
+.popup__total-text {
+  font-size: 18px;
+  color: #454545;
+  margin: 0;
+}
+
+.popup__total-price {
+  font-size: 20px;
+  color: #454545;
+  margin: 0;
+}
+
+.popup__buttons {
+  margin: 0 auto 10px;
+  max-width: 170px;
+}

@@ -1,0 +1,42 @@
+.container {
+  background-color: #fff;
+  min-width: 440px;
+  min-height: 100px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 12px 25px;
+  overflow: hidden;
+  position: relative;
+
+  z-index: 1;
+}
+
+.header {
+  text-align: center;
+  font-size: 20px;
+  color: #3f3f3f;
+  margin-top: 0;
+}
+
+.closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: transparent;
+  border: none;
+}
+
+.close-icon {
+  width: 24px;
+  height: 24px;
+
+  &&:hover {
+    transform: scale(1.2);
+  }
+
+  &&:active {
+    transform: scale(1.2);
+    color: #797979;
+  }
+}

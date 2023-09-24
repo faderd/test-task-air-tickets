@@ -17,7 +17,7 @@ function MainScreen(): JSX.Element {
   const currencyRate = useAppSelector(getCurrencyRateSelector);
 
   useEffect(() => {
-      dispatch(fetchTickets());
+    dispatch(fetchTickets());
   }, [dispatch]);
 
   useEffect(() => {

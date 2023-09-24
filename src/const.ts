@@ -32,3 +32,9 @@ export enum Stops {
   TwoStops = '2',
   ThreeStops = '3',
 }
+
+export enum Payment {
+  Visa = 'visa',
+  Mir = 'mir',
+  Iomoney = 'iomoney',
+}
