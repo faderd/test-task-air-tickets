@@ -10,10 +10,10 @@ function Button({ title, onClick }: ButtonProps): JSX.Element {
   return (
     <button className={styles.button} onClick={onClick}>
       {title.split('\n').map((line) => (
-        <React.Fragment key={line}>
+        <span key={line}>
           {line}
           <br />
-        </React.Fragment>
+        </span>
       ))}
     </button>
   );
