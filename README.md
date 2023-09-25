@@ -1,6 +1,7 @@
 # Демонстрационное приложение - авиабилеты
 
 Проект представляет собой страницу выдачи билетов с фильтрами.
+Доступен на [GitHub Pages](https://faderd.github.io/test-task-air-tickets/).
 
 Реализован на React, TypeScript, Redux Toolkit, сборка на Vite.
 
