@@ -58,7 +58,7 @@ function StopsFilterBlock({ searchParams, setSearchParams }: StopsFilterBlockPro
   };
 
   return (
-    <div className={styles.filter}>
+    <div>
       <h3 className={styles['filter__title']}>Количество пересадок</h3>
       <form className={styles['filter__checkbox']}>
         {Object.values(Stops).map((stop) => (

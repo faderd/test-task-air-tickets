@@ -7,6 +7,7 @@ import { TicketsFilters } from '../../types/tickets-filters';
 import { useAppDispatch } from '../../hooks';
 import { storeCurrencySymbol } from '../../store/tickets-data/tickets-data';
 import StopsFilterBlock from '../stops-filter-block/stops-filter-block';
+import SearchFilterBlock from '../search-filter-block/search-filter-block';
 
 type TicketsFilterProps = {
   setFilters: (filters: TicketsFilters) => void;
@@ -39,6 +40,7 @@ function TicketsFilter({ setFilters }: TicketsFilterProps): JSX.Element {
       <div className={styles['filter__wrapper']}>
         <CurrencyFilterBlock searchParams={searchParams} setSearchParams={setSearchParams} />
         <StopsFilterBlock searchParams={searchParams} setSearchParams={setSearchParams} />
+        <SearchFilterBlock />
       </div>
     </div>
   );
