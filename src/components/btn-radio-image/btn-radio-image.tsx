@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import styles from './btn-radio-image.module.less';
 
 type BtnRadioImageProps<T> = {
@@ -11,6 +12,7 @@ type BtnRadioImageProps<T> = {
   ariaLabel: string;
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 function BtnRadioImage<T>({ imgLink, imgWidth, imgHeight, isChecked, setChecked, checkedType, inputName, ariaLabel }: BtnRadioImageProps<T>): JSX.Element {
   return (
     <div className={styles['btn-radio-image']}>
@@ -25,4 +27,4 @@ function BtnRadioImage<T>({ imgLink, imgWidth, imgHeight, isChecked, setChecked,
   );
 }
 
-export default BtnRadioImage;
+export default memo(BtnRadioImage) as typeof BtnRadioImage;

@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { addDeclension, humanizeDate } from '../../helpers/common';
 import { Ticket } from '../../types/ticket';
 import Button from '../button/button';
@@ -9,7 +10,7 @@ type TicketCardProps = {
   setTicketForPopup: (ticket: Ticket | null) => void;
 };
 
-function TicketCard({ ticket, currencySymbol, setTicketForPopup }: TicketCardProps): JSX.Element {
+const TicketCard = memo(function TicketCard({ ticket, currencySymbol, setTicketForPopup }: TicketCardProps): JSX.Element {
   const handleClickBuy = (evt: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     evt.preventDefault();
     setTicketForPopup(ticket);
@@ -42,6 +43,6 @@ function TicketCard({ ticket, currencySymbol, setTicketForPopup }: TicketCardPro
       </div>
     </div>
   );
-}
+})
 
 export default TicketCard;

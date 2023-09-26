@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import BtnRadioImage from '../btn-radio-image/btn-radio-image';
 import style from './payment-method.module.less';
 import { Payment } from '../../const';
@@ -15,10 +15,10 @@ function PaymentMethod(): JSX.Element {
     setHovered(false);
   };
 
-  const getImgLink = (currentPayment: Payment): string => {
+  const getImgLink = useCallback((currentPayment: Payment): string => {
     const isDisabled = payment !== currentPayment && hovered !== currentPayment;
     return `#${currentPayment}-logo${isDisabled ? '-disabled' : ''}`;
-  };
+  }, [hovered, payment]);
 
   return (
     <>
