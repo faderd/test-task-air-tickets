@@ -19,8 +19,10 @@ function TicketsFilter({ setFilters }: TicketsFilterProps): JSX.Element {
 
   const searchParamCurrency = searchParams.get(SearchParam.Currency);
   const searchParamStops = searchParams.get(SearchParam.Stops);
+  const searchParamSearch = searchParams.get(SearchParam.SearchTerm);
 
   useEffect(() => {
+    // установим query параметры по умолчанию
     if (!searchParamCurrency) {
       searchParams.set(SearchParam.Currency, DEFAULT_CURRENCY);
       setSearchParams(searchParams);
@@ -30,9 +32,9 @@ function TicketsFilter({ setFilters }: TicketsFilterProps): JSX.Element {
       setSearchParams(searchParams);
     }
 
-    setFilters({ searchParamCurrency, searchParamStops });
+    setFilters({ searchParamCurrency, searchParamStops, searchParamSearch });
     dispatch(storeCurrencySymbol(CurrencySymbol[searchParamCurrency || DEFAULT_CURRENCY]));
-  }, [dispatch, searchParamCurrency, searchParamStops, searchParams, setFilters, setSearchParams]);
+  }, [dispatch, searchParamCurrency, searchParamSearch, searchParamStops, searchParams, setFilters, setSearchParams]);
 
   return (
     <div className={styles.filter}>
@@ -40,7 +42,7 @@ function TicketsFilter({ setFilters }: TicketsFilterProps): JSX.Element {
       <div className={styles['filter__wrapper']}>
         <CurrencyFilterBlock searchParams={searchParams} setSearchParams={setSearchParams} />
         <StopsFilterBlock searchParams={searchParams} setSearchParams={setSearchParams} />
-        <SearchFilterBlock />
+        <SearchFilterBlock searchParams={searchParams} setSearchParams={setSearchParams} />
       </div>
     </div>
   );

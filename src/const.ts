@@ -9,6 +9,7 @@ export enum AppRoute {
 export enum SearchParam {
   Currency = 'currency',
   Stops = 'stops',
+  SearchTerm = 'search',
 }
 
 export enum Currency {
@@ -38,3 +39,5 @@ export enum Payment {
   Mir = 'mir',
   Iomoney = 'iomoney',
 }
+
+export const MAX_SEARCH_STRING_LENGTH = 20;
