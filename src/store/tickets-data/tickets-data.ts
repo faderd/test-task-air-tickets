@@ -5,7 +5,7 @@ import { Tickets } from '../../types/ticket';
 import { fetchCurrencyRate, fetchTickets } from '../api-actions';
 import { CurrencyRate } from '../../types/currency-rate';
 
-const initialState: TicketsData = {
+export const initialState: TicketsData = {
   tickets: [],
   isTicketsDataLoading: false,
   currencyRate: {},

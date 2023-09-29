@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { AppDispatch, State } from '../types/state';
-import { getCurrencyRate, getMockTickets } from '../helpers/mock-data';
+import { getMockCurrencyRate, getMockTickets } from '../helpers/mock-data';
 import { storeCurrencyRate, storeTickets } from './tickets-data/tickets-data';
 
 export const fetchTickets = createAsyncThunk<void, undefined, {
@@ -24,7 +24,7 @@ export const fetchCurrencyRate = createAsyncThunk<void, undefined, {
 >('tickets-data/fetchCurrencyRate',
   async (_, { dispatch }) => {
     try {
-      const data = await getCurrencyRate();
+      const data = await getMockCurrencyRate();
       dispatch(storeCurrencyRate(data));
     } catch (err) {
       alert('Ошибка загрузки: ' + err);

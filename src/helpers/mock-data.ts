@@ -165,10 +165,9 @@ export const getMockTickets = async (): Promise<{ tickets: Tickets }> => {
       resolve(tickets);
     }, 3000);
   });
-
 };
 
-export const getCurrencyRate = async (): Promise<CurrencyRate> => {
+export const getMockCurrencyRate = async (): Promise<CurrencyRate> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(currencyRate);
