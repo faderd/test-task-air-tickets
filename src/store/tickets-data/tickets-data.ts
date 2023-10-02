@@ -5,17 +5,17 @@ import { Tickets } from '../../types/ticket';
 import { fetchCurrencyRate, fetchTickets } from '../api-actions';
 import { CurrencyRate } from '../../types/currency-rate';
 
-export const initialState: TicketsData = {
+export const getInitialStateTicketsData = (): TicketsData => ({
   tickets: [],
   isTicketsDataLoading: false,
   currencyRate: {},
   isCurrencyRateLoading: false,
   currencySymbol: DEFAULT_CURRENCY,
-};
+});
 
 export const ticketsData = createSlice({
   name: NameSpace.Data,
-  initialState,
+  initialState: getInitialStateTicketsData(),
   reducers: {
     storeTickets: (state, action: PayloadAction<Tickets>) => {
       state.tickets = action.payload;

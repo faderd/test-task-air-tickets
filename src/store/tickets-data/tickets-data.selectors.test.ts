@@ -3,12 +3,12 @@ import { getMockCurrencyRate, getMockTickets } from '../../helpers/mock-data';
 import { State } from '../../types/state';
 import { Tickets } from '../../types/ticket';
 import { getCurrencyRateSelector, getCurrencySymbolSelector, getIsDataLoadingSelector, getTicketsSelector } from './selectors';
-import { initialState } from './tickets-data';
+import { getInitialStateTicketsData } from './tickets-data';
 
 describe('TicketsData selectors', async () => {
   const mockState: State = {
     [NameSpace.Data]: {
-      ...initialState,
+      ...getInitialStateTicketsData(),
       tickets: await getMockTickets() as unknown as Tickets,
       currencyRate: await getMockCurrencyRate(),
     }
