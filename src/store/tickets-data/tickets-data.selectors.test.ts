@@ -2,7 +2,7 @@ import { NameSpace } from '../../const';
 import { getMockCurrencyRate, getMockTickets } from '../../helpers/mock-data';
 import { State } from '../../types/state';
 import { Tickets } from '../../types/ticket';
-import { getCurrencyRateSelector, getCurrencySymbolSelector, getIsDataLoadingSelector, getTicketsSelector } from './selectors';
+import { getCurrencyRateSelector, getCurrencySymbolSelector, getIsTicketsLoadingSelector, getTicketsSelector } from './selectors';
 import { getInitialStateTicketsData } from './tickets-data';
 
 describe('TicketsData selectors', async () => {
@@ -22,7 +22,7 @@ describe('TicketsData selectors', async () => {
 
   it('should return is data loading status from state', () => {
     const { isTicketsDataLoading } = mockState[NameSpace.Data];
-    const result = getIsDataLoadingSelector(mockState);
+    const result = getIsTicketsLoadingSelector(mockState);
     expect(result).toEqual(isTicketsDataLoading);
   });
 
