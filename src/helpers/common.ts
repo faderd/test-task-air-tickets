@@ -4,6 +4,7 @@ import { Tickets, Ticket } from '../types/ticket';
 import { TicketsFilters } from '../types/tickets-filters';
 import dayjs from 'dayjs';
 import 'dayjs/locale/ru';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
 
 export const applyTrainingsFilters = (tickets: Tickets, filters: TicketsFilters, currencyRate: CurrencyRate) => {
   let filteredTickets = tickets.slice();
@@ -40,8 +41,11 @@ export const applyTrainingsFilters = (tickets: Tickets, filters: TicketsFilters,
 };
 
 export const humanizeDate = (dateString: string | number | Date | dayjs.Dayjs | null | undefined) => {
-  const date = dayjs(dateString, 'DD.MM.YY').locale('ru');
+  dayjs.extend(customParseFormat);
+
+  const date = dayjs(dateString, 'DD.MM.YY', 'ru', true).locale('ru');
   const formattedDate = date.format('D MMM YYYY, dd');
+
   return formattedDate;
 };
 

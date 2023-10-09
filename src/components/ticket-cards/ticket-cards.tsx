@@ -25,7 +25,7 @@ function TicketCards({ tickets }: TicketCardsProps): JSX.Element {
           isTicketsDataLoading && (new Array(SKELETONS_COUNT).fill(null).map(() => (<TicketCardSkeleton />)))
         }
 
-        {tickets.map((ticket) => (
+        {!isTicketsDataLoading && tickets.map((ticket) => (
           <TicketCard
             key={ticket.price + ticket.origin + ticket.destination}
             ticket={ticket}
